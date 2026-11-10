@@ -265,6 +265,28 @@
     box-shadow:0 8px 24px -8px var(--cyan);
   }
 
+  .hero-contact{
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;
+    margin-top:22px;font-size:0.86rem;color:var(--text-dim);
+  }
+  .contact-label{
+    font-size:0.68rem;font-weight:700;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--cyan);
+  }
+  .hero-contact a,.contact-work a{
+    color:var(--text);border-bottom:1px dotted rgba(255,255,255,0.22);
+    transition:color 0.25s,border-color 0.25s;
+  }
+  .hero-contact a:hover,.contact-work a:hover{color:var(--cyan);border-color:var(--cyan);}
+  .contact-work{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 12px;
+    margin:-16px 0 34px;font-size:0.92rem;color:var(--text-dim);
+  }
+  .btn-tag{
+    font-size:0.66rem;letter-spacing:0.12em;
+    text-transform:uppercase;opacity:0.65;font-weight:700;
+  }
+
   /* Avatar with ripple */
   .hero-avatar-wrap{
     display:flex;align-items:center;justify-content:center;
@@ -666,10 +688,17 @@
         <a href="#experience" class="btn btn-outline">View Experience</a>
       </div>
       <div class="hero-socials">
-        <a href="mailto:prajkiran12@gmail.com" class="social-icon" title="Email">✉</a>
+        <a href="mailto:prajkiran12@gmail.com" class="social-icon" title="Personal email — prajkiran12@gmail.com">✉</a>
+        <a href="mailto:hr@gmimena.com" class="social-icon" title="Work email — hr@gmimena.com">✉</a>
         <a href="https://www.linkedin.com/in/kiranpushparaj/" target="_blank" class="social-icon" title="LinkedIn">in</a>
-        <a href="tel:+971521754118" class="social-icon" title="Phone">☎</a>
+        <a href="tel:+971566669369" class="social-icon" title="Work cell — +971 56 666 9369">☎</a>
       </div>
+      <p class="hero-contact">
+        <span class="contact-label">Work</span>
+        <a href="mailto:hr@gmimena.com">hr@gmimena.com</a>
+        <span>·</span>
+        <a href="tel:+971566669369">+971 56 666 9369</a>
+      </p>
     </div>
     <div class="hero-avatar-wrap">
       <div class="avatar-ring"></div>
@@ -1068,8 +1097,15 @@
       <h2>Let's talk <span class="accent">people &amp; operations</span></h2>
       <p>Human Resource Executive at GMI Interior &amp; Fitout, based in Dubai, UAE. Reach out by email, phone, or LinkedIn — happy to share references on request.</p>
       <a href="mailto:prajkiran12@gmail.com" class="contact-email">prajkiran12@gmail.com</a>
+      <div class="contact-work">
+        <span class="contact-label">Work</span>
+        <a href="mailto:hr@gmimena.com">hr@gmimena.com</a>
+        <span>·</span>
+        <a href="tel:+971566669369">+971 56 666 9369</a>
+      </div>
       <div class="hero-cta" style="justify-content:center;">
-        <a href="tel:+971521754118" class="btn btn-primary">+971 52 175 4118</a>
+        <a href="tel:+971566669369" class="btn btn-primary"><span class="btn-tag">Work</span> +971 56 666 9369</a>
+        <a href="tel:+971521754118" class="btn btn-outline"><span class="btn-tag">Personal</span> +971 52 175 4118</a>
         <a href="https://www.linkedin.com/in/kiranpushparaj/" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
       </div>
     </div>
