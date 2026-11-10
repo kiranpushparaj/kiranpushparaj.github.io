@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kiran Pushparaj — Office Administrator & Operations Professional</title>
+<title>Kiran Pushparaj — Human Resource Executive | GMI Interior & Fitout</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -115,10 +115,31 @@
     display:flex;justify-content:space-between;align-items:center;
   }
   .logo{
+    display:flex;align-items:center;gap:16px;
     font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;
     letter-spacing:0.05em;
   }
-  .logo span{color:var(--cyan);}
+  .logo .logo-name span{color:var(--cyan);}
+  .logo-divider{width:1px;height:26px;background:var(--border);}
+  .company-lockup{display:flex;align-items:center;gap:10px;}
+  /* Mark is cropped to the emblem so the tiny caption inside the file stays crisp-free */
+  .company-mark{
+    height:34px;overflow:hidden;
+    display:flex;align-items:flex-start;
+  }
+  .company-mark img{
+    height:39px;width:auto;display:block;
+    filter:drop-shadow(0 0 10px rgba(61,232,255,0.25));
+  }
+  .company-name{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:0.7rem;line-height:1.3;
+    letter-spacing:0.13em;text-transform:uppercase;
+    color:var(--text-dim);
+  }
+  .company-name strong{
+    display:block;color:var(--text);font-size:0.78rem;letter-spacing:0.1em;
+  }
   .nav-links{
     display:flex;gap:32px;
     font-size:0.92rem;font-weight:500;
@@ -184,6 +205,22 @@
     max-width:540px;
   }
   .hero-title strong{color:var(--text);font-weight:700;}
+  .hero-employer{
+    display:inline-flex;align-items:center;gap:14px;
+    width:fit-content;
+    border:1px solid var(--border);border-radius:14px;
+    padding:11px 18px;margin-bottom:20px;
+    background:rgba(255,255,255,0.02);
+  }
+  .hero-employer-mark{height:38px;overflow:hidden;display:flex;align-items:flex-start;}
+  .hero-employer-mark img{height:44px;width:auto;display:block;}
+  .hero-employer-name{
+    display:block;font-family:'Syne',sans-serif;font-weight:700;
+    font-size:0.95rem;letter-spacing:0.03em;
+  }
+  .hero-employer-meta{
+    display:block;color:var(--text-dim);font-size:0.76rem;margin-top:3px;
+  }
   .hero-desc{
     font-size:1rem;color:var(--text-dim);
     max-width:520px;line-height:1.7;margin-bottom:36px;
@@ -546,6 +583,14 @@
 
   /* ====== RESPONSIVE ====== */
   @media (max-width: 900px){
+    .logo{font-size:1rem;gap:12px;}
+    .logo-divider{height:22px;}
+    .company-name{display:none;}
+    .company-mark{height:28px;}
+    .company-mark img{height:32px;}
+    .hero-employer{padding:10px 14px;gap:10px;}
+    .hero-employer-mark{height:32px;}
+    .hero-employer-mark img{height:37px;}
     .hero-grid, .about-grid, .edu-grid{grid-template-columns:1fr;gap:48px;}
     .hero-avatar-wrap{height:260px;order:-1;}
     .avatar-ring:nth-child(1){width:120px;height:120px;}
@@ -580,7 +625,14 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="logo">KIRAN<span>.</span>PUSHPARAJ</div>
+    <div class="logo">
+      <span class="logo-name">KIRAN<span>.</span>PUSHPARAJ</span>
+      <span class="logo-divider"></span>
+      <span class="company-lockup">
+        <span class="company-mark"><img src="assets/gmi-logo-white.png" alt="GMI Interior &amp; Fitout logo"></span>
+        <span class="company-name"><strong>GMI Interior</strong>&amp; Fitout</span>
+      </span>
+    </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -598,11 +650,18 @@
     <div>
       <div class="hero-greeting">Hello, I'm</div>
       <h1 class="hero-name">Kiran Pushparaj</h1>
+      <a class="hero-employer" href="https://gmimena.com/" target="_blank" rel="noopener">
+        <span class="hero-employer-mark"><img src="assets/gmi-logo-white.png" alt="GMI Interior &amp; Fitout logo"></span>
+        <span>
+          <span class="hero-employer-name">GMI Interior &amp; Fitout</span>
+          <span class="hero-employer-meta">Dubai, UAE · Turnkey Interior Fit-out &amp; Design</span>
+        </span>
+      </a>
       <p class="hero-title">
-        <strong>Office Administrator & Operations Professional</strong> — Property Management · Strata Operations · Logistics & Retail Coordination
+        <strong>Human Resource Executive</strong> — People Operations · Recruitment · HR Administration
       </p>
       <p class="hero-desc">
-        Results-driven administration and operations professional with over eight years of international experience across property management, retail, and accounting sectors. I streamline workflows, lead cross-functional teams, and turn messy back-office processes into clean, compliant systems — currently based in Dubai, UAE.
+        Human Resource Executive at GMI Interior &amp; Fitout in Dubai, where I look after the people side of a growing fit-out contractor — recruitment, onboarding, employee records, and the systems that keep site and office teams organised. Eight years of international administration and operations experience across property management, retail, and accounting come with it.
       </p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -629,11 +688,12 @@
     <div class="about-grid">
       <div class="reveal slide-left">
         <span class="eyebrow">About Me</span>
-        <h2 style="margin-bottom:24px;">8+ years building <span class="accent">order out of operational chaos</span></h2>
+        <h2 style="margin-bottom:24px;">8+ years building <span class="accent">teams, systems & order</span></h2>
         <div class="about-text">
-          <p>I'm an administration and operations professional with international experience spanning Canada and India. My background covers property and strata management, retail logistics, and corporate administration — anywhere documentation, compliance, and people need to work together smoothly.</p>
+          <p>I'm a Human Resource Executive with international experience spanning Canada, India, and now the UAE. My background covers HR administration, property and strata management, retail logistics, and corporate administration — anywhere documentation, compliance, and people need to work together smoothly.</p>
+          <p>At <strong>GMI Interior &amp; Fitout</strong> in Dubai, I support the people operations of a turnkey interior fit-out and design contractor working across the GCC — residential, office, retail, F&amp;B, clinic, and mall projects delivered through in-house design, authority approvals, and site construction teams.</p>
           <p>At Associa Property Management in Vancouver, I managed front-line operations for a portfolio of 100+ residential strata properties, handled accounts receivable and delinquency resolution, and supported AGM records and board communications with 100% audit compliance.</p>
-          <p>Earlier, as Department Manager at Walmart Canada, I supervised a team of 15 in a high-volume logistics environment, reducing out-of-stock instances by 18% and improving customer service resolution time by 25%. I'm currently based in Dubai and seeking a management-level administrative or operations role where I can bring this leadership and process-improvement mindset to a growing organization.</p>
+          <p>Earlier, as Department Manager at Walmart Canada, I supervised a team of 15 in a high-volume logistics environment, reducing out-of-stock instances by 18% and improving customer service resolution time by 25%. I'm now based in Dubai, bringing this leadership and process-improvement mindset to a growing organization.</p>
         </div>
         <div class="about-stats">
           <div class="stat"><div class="num">8+</div><div class="label">Years of Experience</div></div>
@@ -646,8 +706,8 @@
         <div class="float-card">
           <div>
             <div class="float-card-icon">🗂️</div>
-            <h4>Operations Snapshot</h4>
-            <p>Office Administrator / Strata Manager Assistant — Associa Property Management, Vancouver, BC.</p>
+            <h4>Current Role</h4>
+            <p>Human Resource Executive — GMI Interior &amp; Fitout, Business Bay, Dubai, UAE.</p>
           </div>
           <div>
             <p style="margin-bottom:14px;">Languages: English (Fluent) · Hindi (Working) · Malayalam (Native) · Arabic (Learning)</p>
@@ -671,7 +731,15 @@
     </div>
     <div class="skills-grid">
       <div class="skill-group reveal fade-up">
-        <h4>Administration & Documentation</h4>
+        <h4>HR, Administration & Documentation</h4>
+        <div class="skill-item">
+          <div class="skill-name"><span>Recruitment & Onboarding</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill pink" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>UAE Labour & HR Compliance</span><span>86%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+        </div>
         <div class="skill-item">
           <div class="skill-name"><span>Office Administration & Coordination</span><span>96%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="96"></div></div>
@@ -725,10 +793,30 @@
   <div class="wrap">
     <div class="section-head reveal fade-up">
       <span class="eyebrow">Experience</span>
-      <h2>A track record across <span class="accent">property, retail & admin</span></h2>
-      <p>From frontline strata operations in Vancouver to retail department management — a timeline of roles that built a broad operational skill set.</p>
+      <h2>From site operations to <span class="accent">people operations</span></h2>
+      <p>Currently leading HR operations at GMI Interior &amp; Fitout in Dubai, on top of eight years across property management, retail, and administration in Canada and India.</p>
     </div>
     <div class="timeline">
+
+      <div class="timeline-item reveal fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-period">Present</span>
+            <span class="timeline-location">Business Bay, Dubai, UAE</span>
+          </div>
+          <h3>GMI Interior &amp; Fitout</h3>
+          <div class="role">Human Resource Executive</div>
+          <ul>
+            <li>Run day-to-day HR operations for a turnkey interior fit-out and design contractor delivering residential, office, retail, F&amp;B, clinic, and mall projects across the GCC.</li>
+            <li>Manage end-to-end recruitment — sourcing, screening, interview coordination, and offer documentation — for both office and site-based teams.</li>
+            <li>Own onboarding, employee records, leave and attendance tracking, and HR documentation in line with <strong>UAE labour requirements</strong>.</li>
+            <li>Coordinate payroll inputs, visa and labour card renewals, and compliance paperwork with the PRO and finance teams.</li>
+            <li>Maintain headcount and HR trackers for management reporting, and support performance review and employee engagement cycles.</li>
+            <li>Working on the company's <strong>in-house ERP application</strong> to bring employee, attendance, and HR records into one system.</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="timeline-item reveal fade-up">
         <div class="timeline-dot"></div>
@@ -831,9 +919,16 @@
     <div class="section-head reveal fade-up">
       <span class="eyebrow">Key Initiatives</span>
       <h2>Process improvements I've <span class="accent">led & delivered</span></h2>
-      <p>Operational projects and initiatives that improved efficiency, compliance, and reporting across teams.</p>
+      <p>Operational projects and initiatives — delivered and in progress — that improved efficiency, compliance, and people processes across teams.</p>
     </div>
     <div class="projects-grid">
+
+      <div class="project-card reveal fade-up">
+        <div class="project-icon">🧩</div>
+        <h3>Company ERP Application</h3>
+        <p>Working on GMI Interior &amp; Fitout's in-house ERP application — mapping HR workflows for employee records, attendance, leave, and payroll inputs, then testing them with the office and site teams so everything lives in one system.</p>
+        <div class="project-tags"><span>ERP</span><span>HR Systems</span><span>In Progress</span></div>
+      </div>
 
       <div class="project-card reveal fade-up">
         <div class="project-icon">🏢</div>
@@ -884,11 +979,13 @@
 <!-- COMPANIES MARQUEE -->
 <div class="marquee-wrap reveal fade-up">
   <div class="marquee-track">
+    <span>GMI Interior & Fitout</span>
     <span>Associa Property Management</span>
     <span>Walmart Canada</span>
     <span>Alliance Maintenance Ltd.</span>
     <span>Logixx Security Inc.</span>
     <span>Khader & Co Tax Consultants</span>
+    <span>GMI Interior & Fitout</span>
     <span>Associa Property Management</span>
     <span>Walmart Canada</span>
     <span>Alliance Maintenance Ltd.</span>
@@ -970,8 +1067,8 @@
     </div>
     <div class="contact-content reveal fade-up">
       <span class="eyebrow">Get In Touch</span>
-      <h2>Let's talk about your <span class="accent">operations team</span></h2>
-      <p>Based in Dubai, UAE, and open to management-level administrative or operations roles. Reach out by email, phone, or LinkedIn — happy to share references on request.</p>
+      <h2>Let's talk <span class="accent">people &amp; operations</span></h2>
+      <p>Human Resource Executive at GMI Interior &amp; Fitout, based in Dubai, UAE. Reach out by email, phone, or LinkedIn — happy to share references on request.</p>
       <a href="mailto:prajkiran12@gmail.com" class="contact-email">prajkiran12@gmail.com</a>
       <div class="hero-cta" style="justify-content:center;">
         <a href="tel:+971521754118" class="btn btn-primary">+971 52 175 4118</a>
